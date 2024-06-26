@@ -1,9 +1,0 @@
-function [result] = first_dev_focn(n,kap_vec,aprime, lambda, prodwage, r)
-
-global mu  phi B tau2
-
-    result = B*(phi+tau2)*n.^ (phi+tau2-1) + ...
-        mu.*lambda.*(1-tau2) .*prodwage.^(1-tau2) .*( (1+r).*kap_vec +...
-        lambda.*(prodwage.*n).^(1-tau2) - aprime).^(-mu-1).*...
-        lambda.*(prodwage.*n).^(-tau2).*(1-tau2).*prodwage;
-end
